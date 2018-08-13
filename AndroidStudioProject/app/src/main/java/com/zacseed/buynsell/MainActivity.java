@@ -72,6 +72,8 @@ public class MainActivity extends AppCompatActivity
             homeWebView.loadUrl("http://parttimesrilanka.com/BuynSell/user/createAccount.php");
         }
 
+        getSupportActionBar().setTitle("Home");
+
     }
 
     private class CustomWebViewClient extends WebViewClient {
