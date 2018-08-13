@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity
     String loginUrl;
 
     WebView homeWebView;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,12 +49,11 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        Intent fromLoginIntent = getIntent();
-        Bundle bd = fromLoginIntent.getExtras();
-
         String email = LoginActivity.email;
         String pwd = LoginActivity.pwd;
         String WvSwitch = LoginActivity.WvSwitch;
+
+
 
         homeWebView = (WebView) findViewById(R.id.homeWebView);
         homeWebView.getSettings().setAppCacheMaxSize( 5 * 1024 * 1024 ); // 5MB
@@ -62,7 +63,8 @@ public class MainActivity extends AppCompatActivity
         homeWebView.getSettings().setJavaScriptEnabled(true);
         homeWebView.getSettings().setCacheMode( WebSettings.LOAD_DEFAULT ); // load online by default
 
-        homeWebView.setWebViewClient(new CustomWebViewClient());
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        homeWebView.setWebViewClient(new CustomWebViewClient(progressBar));
 
         if (WvSwitch == "login"){
             homeWebView.loadUrl("http://parttimesrilanka.com/BuynSell/user/login.php?em="+email+"&pwd="+pwd);
@@ -78,6 +80,13 @@ public class MainActivity extends AppCompatActivity
 
     private class CustomWebViewClient extends WebViewClient {
 
+        private ProgressBar wvProgressbar;
+
+        public CustomWebViewClient(ProgressBar wvProgressbar){
+            this.wvProgressbar = wvProgressbar;
+            wvProgressbar.setVisibility(View.VISIBLE);
+        }
+
         @Override
         public boolean shouldOverrideUrlLoading(WebView wv, String url) {
             if(url.startsWith("tel:")) {
@@ -87,6 +96,12 @@ public class MainActivity extends AppCompatActivity
                 return true;
             }
             return false;
+        }
+
+        @Override
+        public void onPageFinished(WebView wv, String url){
+            super.onPageFinished(wv, url);
+            wvProgressbar.setVisibility(View.GONE);
         }
     }
 
