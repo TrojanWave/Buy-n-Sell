@@ -186,23 +186,24 @@ li.dropdown-header {
     margin: 100px auto;
 }
 .header {
-    padding: 0px 0;
     background-color: #FDFDFD;
+    background: linear-gradient(to right,white,#2176C9);
 }
 .logo {
     float: left;
+
 }
 .header-right{
 	float:right;
 }
 .logo a {
-	font-family: 'Ubuntu Condensed', sans-serif;
+	font-family: 'Kanit', sans-serif;
 	font-size: 50px;
-    color: #01a185;
+    color: #ffffff;
 	text-decoration:none;
 }
 .logo a span {
-	color:#f3c500;
+	color:#000000;
 }
 a.account {
     float: left;
