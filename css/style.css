@@ -195,7 +195,9 @@ li.dropdown-header {
 }
 .logoImg{
 	float: left;
-	height: 
+	height: 5vh;
+	width: 6vh;
+	border-radius: 50px
 }
 .header-right{
 	float:right;
