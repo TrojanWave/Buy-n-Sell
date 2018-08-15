@@ -206,22 +206,23 @@ li.dropdown-header {
 }
 a.account {
     float: left;
-    margin-top: 20px;
+    margin-top: 1px;
     font-size: 15px;
-    color: #fff;
-    background-color: #01a185;
+    color: #6D6D6D;
+    /*background-color: #01a185;*/
     padding: 6px 20px;
     text-decoration: none;
 }
 a.account:hover {
 	background-color: #f3c500;
 }
+
 span.active.uls-trigger {
     float: left;
     cursor: pointer;
     font-size: 14px;
     color: #6D6D6D;
-    margin-top: 26px;
+    margin-top: 8px;
 }
 .selectregion {
     float: left;
@@ -368,7 +369,7 @@ border:1px solid #e7eaed;
 .focus-image i.fa-gratipay {
 	background:#7fbad8;
 }
-.focus-image i.fa-gamepad {
+.focus-image i.fa-align-justify {
 	background:#1ca39d;
 }
 .focus-image i.fa-shield {
