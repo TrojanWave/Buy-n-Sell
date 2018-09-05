@@ -213,7 +213,19 @@ a.account {
     padding: 6px 20px;
     text-decoration: none;
 }
+span.account {
+    float: left;
+    margin-top: 1px;
+    font-size: 15px;
+    color: #6D6D6D;
+    /*background-color: #01a185;*/
+    padding: 6px 20px;
+    text-decoration: none;
+}
 a.account:hover {
+	background-color: #f3c500;
+}
+span.account:hover {
 	background-color: #f3c500;
 }
 
@@ -222,7 +234,7 @@ span.active.uls-trigger {
     cursor: pointer;
     font-size: 14px;
     color: #6D6D6D;
-    margin-top: 8px;
+    margin-top: 2px;
 }
 .selectregion {
     float: left;
