@@ -89,6 +89,45 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
+.dropbtn {
+    background-color: #01a185;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 40px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 </style>
 </head>
 <body>
@@ -212,30 +251,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a href="" style="float: right; margin-top: 3px">More Details </a>
 						
 					</div>
+					<div class="item-price" style="margin-top: 25px">
+						<div class="model">
+							<p class="p-price">Select the color</p>
+							<h4>
+								<div class="dropdown">
+  									<button class="dropbtn">Gold</button>
+  									<div class="dropdown-content" style="font-size: 14px">
+										 <a href="#">Black</a>
+										  <a href="#">Grey</a>
+										  <a href="#">Blue</a>
+  									</div>
+								</div>
+							</h4>
+							<div class="clearfix"></div>
+						</div>
+						<div class="model">
+							<p class="p-price">Quantity</p>
+							<h4>
+  								<input type="number" name="" style="width: 50px">
+							</h4>
+							<div class="clearfix"></div>
+						</div>
+						<div class="model">
+							<p class="p-price">Price</p>
+							<h4>Rs.23,990</h4>
+							<div class="clearfix"></div>
+						</div>
 					
-						<div class="tips">
-						<div>
-							<h4>Select the color</h4>
-							<select>
-								<option>Gold</option>
-								<option>Black</option>
-								<option>Blue</option>
+					</div>
 
-							</select>
-						</div>
-
-							<ol>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-								<li><a href="#">Contrary to popular belief.</a></li>
-							</ol>
-						</div>
 				</div>
 			<div class="clearfix"></div>
 			</div>
