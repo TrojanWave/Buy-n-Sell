@@ -2151,19 +2151,7 @@ form.submit {
     padding:0 15px;
 	position:relative;
 }
-.item-price:before {
-	    content: '';
-    position: absolute;
-    z-index: 1;
-    left: -50.5%;
-    background-color: rgba(0,0,0,0);
-    border: 105px solid rgba(0,0,0,0);
-    border-right-color: rgba(1, 161, 133, 0.36);
-    height: 0;
-    width: 0;
-    top: -3px;
-    border-right-width: 80px;
-}
+
 p.p-price {
     float: left;
     width: 50%;
@@ -2180,25 +2168,26 @@ h3.rate {
     color: #f3c500;
     font-size: 30px;
 }
-.condition h4,.itemtype h4 {
+.model h4,.itemtype h4 {
     margin: 0;
     floaT: left;
     font-size: 22px;
 }
-.condition p,.itemtype p {
+.model p,.itemtype p {
     margin: 0;
 	margin-left: 20px;
 }
-.product-price {
+.product-brand {
     padding: 20px 0;
 }
-.condition {
+.model {
     padding: 20px 0;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
 }
-.itemtype {
+.display {
     padding: 20px 0;
+    border-bottom: 1px solid #eee;
 }
 .interested {
     margin: 20px;
@@ -3461,10 +3450,7 @@ label {
 		font-size: 12px;
 		margin-top: 10px;
 	}
-	.item-price:before {
-		left: -58.5%;
-		border-right-width: 68px;
-	}
+	
 	h5.title {
 		font-size: 18px;
 		height: 57px;
@@ -3696,13 +3682,9 @@ label {
 		margin-left: 0;
 		padding: 0 15px;
 		margin-top: 15%;
+		margin-bottom: 15%;
 	}
-	.item-price:before {
-		left: 33.5%;
-		border-right-width: 90px;
-		top: -205px;
-		transform: rotate(90deg);
-	}
+	
 	.interested,.tips {
 		margin-left: 0;
 		margin-right: 0;
