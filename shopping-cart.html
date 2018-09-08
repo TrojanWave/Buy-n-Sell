@@ -83,6 +83,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
+.item ,.methods{
+	width: 50%;
+
+}
+th,td,tr{
+	text-align: center;
+	font-size: 20px;
+
+}
+.price{
+	width: 10%;
+}
+.table-striped{
+	margin-top: 20px;
+}
 </style>
 </head>
 <body>
@@ -96,13 +111,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-	<div class="main-banner banner text-center">
-	  <div class="container">    
-			<h1>Sell or Advertise   <span class="segment-heading">anything online </span> with Buy n Sell</h1>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-			<a href="post-ad.html">Post Free Ad</a>
-	  </div>
-	</div>
 	<div class="row">
 		<div class="container">
 			<div class="logo">
@@ -113,7 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 			<div class="header-right" style="float: left; margin-top: 10px">
-				<a href="" style="text-decoration: none">
+				<a href="shopping-cart.html" style="text-decoration: none">
 					<i class="fa fa-shopping-cart" style="height: 25px; width: 25px; font-size: 25px; color: #01a185; margin-left: 20px;padding-top: 0px"></i>
 				</a>
 				<a href="">
@@ -126,3 +134,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				
 			</div>
 		</div>
+	</div>
+
+	<!--heading-->
+	<div class="container">
+		<div class="search-container" style="margin-top: 20px">
+			<h2 style="color: #01a185">Shopping Cart</h2>
+			<p style="color: #01a185">Let's see what are you going to buy...</p>
+		</div>
+	</div>
+
+	<!-- Start the content-->
+	<div class="container">
+		<table class="table table-striped">
+	  <thead>
+	    <tr>
+	       <th scope="col" class="item" colspan="2">Item</th>
+	       <th scope="col" class="price">Price</th>
+	       <th scope="col">Qty</th>
+	       <th scope="col" class="methods">Buying Method</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>
+	      	<img src="images/c5.jpg" height="50px" width="50px">
+	      </td>
+	      <td>
+	      	<p style="font-size: 16px">Honda X5 auto gearing 1500 engine capacity</p>
+	      </td>
+	      <td><p>Rs.2,000,000.00</p></td>
+	      <td>1</td>
+	      <td>Contact Seller And Buy</td>
+	    </tr>
+	    <tr>
+	      <td>
+	      	<img src="images/d5.jpg" height="50px" width="50px">
+	      </td>
+	      <td><p>German Shepod Dog. 1yrs 20Kg</p></td>
+	      <td><p>Rs.100,000</p></td>
+	      <td><p>2</p></td>
+	      <td><p>Contact Seller and Buy</p></td>
+	    </tr>
+	    <tr>
+	      <td>
+	      	<img src="images/fa10.jpg" height="50px" width="50px">
+	      </td>
+	      <td><p>Men Tshirt. 15 1/2" 27" cotton red</p></td>
+	      <td><p>Rs.870.00</p></td>
+	      <td><p>1</p></td>
+	      <td><p>Buy Online</p></td>
+	    </tr>
+	  </tbody>
+	</table>
+	</div>
+</body>
