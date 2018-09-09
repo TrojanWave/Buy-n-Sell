@@ -48,3 +48,18 @@ function validateConfirmPassword(){
 
 }
 
+function validateForm(){
+	var fname = document.getElementById("fname").value;
+	var lname = document.getElementById("lname").value;
+	var email = document.getElementById("Email").value;
+	var psw = document.getElementById("password").value;
+	var confirm = document.getElementById("Confirm").value;
+	var district = document.getElementById("district").value;
+	var location = document.getElementById("location").value;
+	var zip = document.getElementById("Zip").value;
+
+	if (fname == "" || lname == "" email == "" psw == "" confirm == "" district == "" location == "" zip == "") {
+		alert("All text boxes should be filled.");
+	}
+}
+
