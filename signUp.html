@@ -347,7 +347,7 @@
 					<div class="contact_form_container">
 						<div class="contact_form_title">Sign Up</div>
 
-            <form>
+            <form class="register" method="post">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">First Name</label>
@@ -360,7 +360,7 @@
               </div>
               <div class="form-group">
                 <label for="inputAddress">Email</label>
-                <input type="text" class="form-control" id="email" placeholder="Email">
+                <input type="text" class="form-control" id="Email" placeholder="Email" oninput="validateEmail()" style="background-position: right; background-repeat: no-repeat;">
               </div>
               <div class="form-group">
                 <label for="inputAddress2">Password</label>
