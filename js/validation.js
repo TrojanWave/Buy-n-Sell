@@ -1,5 +1,5 @@
 function validateEmail(){
-	var email = document.forms["register"]["Email"].value;
+	var email = document.getElementById("Email").value;
 	var atPosition = email.indexOf("@");
 	var dotPosition = email.indexOf(".");
 

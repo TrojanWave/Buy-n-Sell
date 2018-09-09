@@ -10,6 +10,7 @@
 <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+<script type="text/javascript" src="js/validation.js"></script>
 
 </head>
 
@@ -350,25 +351,25 @@
             <form class="register" method="post">
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">First Name</label>
-                  <input type="email" class="form-control" id="fname" placeholder="First name">
+                  <label for="firstName">First Name</label>
+                  <input type="text" class="form-control" id="fname" placeholder="First name" onchange="validateFname()" style="background-position: right; background-repeat: no-repeat;">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputPassword4">Last Name</label>
-                  <input type="password" class="form-control" id="lname" placeholder="Last name">
+                  <label for="lastName">Last Name</label>
+                  <input type="text" class="form-control" id="lname" placeholder="Last name" onchange="validateLname()" style="background-position: right; background-repeat: no-repeat;">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputAddress">Email</label>
-                <input type="text" class="form-control" id="Email" placeholder="Email" oninput="validateEmail()" style="background-position: right; background-repeat: no-repeat;">
+                <label for="Email">Email</label>
+                <input type="text" class="form-control" id="Email" name="Email" placeholder="Email" oninput="validateEmail()" style="background-position: right; background-repeat: no-repeat;">
               </div>
               <div class="form-group">
-                <label for="inputAddress2">Password</label>
-                <input type="text" class="form-control" id="password" placeholder="Password">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" oninput="validatePassword()" style="background-position: right; background-repeat: no-repeat;" >
               </div>
               <div class="form-group">
-                <label for="inputAddress2">Confirm Password</label>
-                <input type="text" class="form-control" id="Confirm" placeholder="Confirm password">
+                <label for="ConfirmPassword">Confirm Password</label>
+                <input type="password" class="form-control" id="Confirm" placeholder="Confirm password" oninput="validateConfirmPassword()" style="background-position: right; background-repeat: no-repeat;">
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
