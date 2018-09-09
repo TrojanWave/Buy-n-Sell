@@ -64,18 +64,18 @@
 		<!-- Header Main -->
 
 		<div class="header_main">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="row">
 
 					<!-- Logo -->
-					<div class="col-lg-2 col-sm-3 col-3 order-1">
+					<div class="col-lg-3 col-sm-6 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="#">OneTech</a></div>
+							<div class="logo" style="padding-left: 90px"><a href="#">Buy n Sell</a></div>
 						</div>
 					</div>
 
 					<!-- Search -->
-					<div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+					<div class="col-lg-5 col-12 order-lg-2 order-3 text-lg-left text-right">
 						<div class="header_search">
 							<div class="header_search_content">
 								<div class="header_search_form_container">
@@ -337,46 +337,6 @@
 
 	</header>
 
-	<!-- Contact Info -->
-
-	<div class="contact_info">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					<div class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
-
-						<!-- Contact Item -->
-						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-							<div class="contact_info_image"><img src="images/contact_1.png" alt=""></div>
-							<div class="contact_info_content">
-								<div class="contact_info_title">Phone</div>
-								<div class="contact_info_text">+38 068 005 3570</div>
-							</div>
-						</div>
-
-						<!-- Contact Item -->
-						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-							<div class="contact_info_image"><img src="images/contact_2.png" alt=""></div>
-							<div class="contact_info_content">
-								<div class="contact_info_title">Email</div>
-								<div class="contact_info_text">fastsales@gmail.com</div>
-							</div>
-						</div>
-
-						<!-- Contact Item -->
-						<div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-							<div class="contact_info_image"><img src="images/contact_3.png" alt=""></div>
-							<div class="contact_info_content">
-								<div class="contact_info_title">Address</div>
-								<div class="contact_info_text">10 Suffolk at Soho, London, UK</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Contact Form -->
 
@@ -385,22 +345,63 @@
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="contact_form_container">
-						<div class="contact_form_title">Get in Touch</div>
+						<div class="contact_form_title">Sign Up</div>
 
-						<form action="#" id="contact_form">
-							<div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-								<input type="text" id="contact_form_name" class="contact_form_name input_field" placeholder="Your name" required="required" data-error="Name is required.">
-								<input type="text" id="contact_form_email" class="contact_form_email input_field" placeholder="Your email" required="required" data-error="Email is required.">
-								<input type="text" id="contact_form_phone" class="contact_form_phone input_field" placeholder="Your phone number">
-							</div>
-							<div class="contact_form_text">
-								<textarea id="contact_form_message" class="text_field contact_form_message" name="message" rows="4" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-							</div>
-							<div class="contact_form_button">
-								<button type="submit" class="button contact_submit_button">Send Message</button>
-							</div>
-						</form>
-
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">First Name</label>
+                  <input type="email" class="form-control" id="fname" placeholder="First name">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputPassword4">Last Name</label>
+                  <input type="password" class="form-control" id="lname" placeholder="Last name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">Password</label>
+                <input type="text" class="form-control" id="password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="inputAddress2">Confirm Password</label>
+                <input type="text" class="form-control" id="Confirm" placeholder="Confirm password">
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputCity">District</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>Kandy</option>
+                    <option>Colombo</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputState">location</label>
+                  <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>Peradeniya</option>
+                    <option>Pilimathalawa</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-2">
+                  <label for="inputZip">Zip</label>
+                  <input type="text" class="form-control" id="inputZip">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign up</button>            
+            </form>
 					</div>
 				</div>
 			</div>
