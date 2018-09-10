@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Sign In</title>
+<title>Buy n Sell-Sign In</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
@@ -12,6 +12,12 @@
 <link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 <script type="text/javascript" src="js/validation.js"></script>
 
+<style>
+  .btn-primary{
+    width: 100%;
+    margin-top: 10px;
+  }
+</style>
 </head>
 
 <body>
@@ -258,7 +264,6 @@
 					<div class="col">
 
 						<div class="page_menu_content">
-
 							<div class="page_menu_search">
 								<form action="#">
 									<input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
@@ -342,7 +347,7 @@
 	<!-- Contact Form -->
 
 	<div class="contact_form">
-		<div class="container">
+		<div class="container"  style="padding-left: 45vh; padding-right: 45vh;">
 			<div class="row">
 				<div class="col-lg-10 offset-lg-1">
 					<div class="contact_form_container">
@@ -357,8 +362,13 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" placeholder="Password" oninput="validatePassword()" style="background-position: right; background-repeat: no-repeat;" >
               </div>
-              <div class="form-group"><button type="submit" class="btn btn-primary">Login</button></div>
-              <div class="form-group"><button type="submit" class="btn btn-primary">Create an Account</button></div>
+              <button type="submit" class="btn btn-primary">Login</button>
+              <button class="btn btn-primary"><a href="signUp.html" style="color: white">Create an Account</a></button>
+              <div class="form-check" style="margin-top:20px" >
+                <input type="checkbox" class="form-check-input" id="exampleCheck1" style="margin-left: 2px">
+                <label class="form-check-label" for="exampleCheck1">Remember password</label>
+                <a href="#" style="float: right">Forget password</a>
+              </div>
             </form>
 					</div>
 				</div>
@@ -367,117 +377,7 @@
 		<div class="panel"></div>
 	</div>
 
-	<!-- Map -->
 
-	<div class="contact_map">
-		<div id="google_map" class="google_map">
-			<div class="map_container">
-				<div id="map"></div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
-						<div class="newsletter_title_container">
-							<div class="newsletter_icon"><img src="images/send.png" alt=""></div>
-							<div class="newsletter_title">Sign up for Newsletter</div>
-							<div class="newsletter_text"><p>...and receive %20 coupon for first shopping.</p></div>
-						</div>
-						<div class="newsletter_content clearfix">
-							<form action="#" class="newsletter_form">
-								<input type="email" class="newsletter_input" required="required" placeholder="Enter your email address">
-								<button class="newsletter_button">Subscribe</button>
-							</form>
-							<div class="newsletter_unsubscribe_link"><a href="#">unsubscribe</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-
-				<div class="col-lg-3 footer_col">
-					<div class="footer_column footer_contact">
-						<div class="logo_container">
-							<div class="logo"><a href="#">OneTech</a></div>
-						</div>
-						<div class="footer_title">Got Question? Call Us 24/7</div>
-						<div class="footer_phone">+38 068 005 3570</div>
-						<div class="footer_contact_text">
-							<p>17 Princess Road, London</p>
-							<p>Grester London NW18JR, UK</p>
-						</div>
-						<div class="footer_social">
-							<ul>
-								<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-								<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-								<li><a href="#"><i class="fab fa-google"></i></a></li>
-								<li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-2 offset-lg-2">
-					<div class="footer_column">
-						<div class="footer_title">Find it Fast</div>
-						<ul class="footer_list">
-							<li><a href="#">Computers & Laptops</a></li>
-							<li><a href="#">Cameras & Photos</a></li>
-							<li><a href="#">Hardware</a></li>
-							<li><a href="#">Smartphones & Tablets</a></li>
-							<li><a href="#">TV & Audio</a></li>
-						</ul>
-						<div class="footer_subtitle">Gadgets</div>
-						<ul class="footer_list">
-							<li><a href="#">Car Electronics</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="col-lg-2">
-					<div class="footer_column">
-						<ul class="footer_list footer_list_2">
-							<li><a href="#">Video Games & Consoles</a></li>
-							<li><a href="#">Accessories</a></li>
-							<li><a href="#">Cameras & Photos</a></li>
-							<li><a href="#">Hardware</a></li>
-							<li><a href="#">Computers & Laptops</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="col-lg-2">
-					<div class="footer_column">
-						<div class="footer_title">Customer Care</div>
-						<ul class="footer_list">
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">Order Tracking</a></li>
-							<li><a href="#">Wish List</a></li>
-							<li><a href="#">Customer Services</a></li>
-							<li><a href="#">Returns / Exchange</a></li>
-							<li><a href="#">FAQs</a></li>
-							<li><a href="#">Product Support</a></li>
-						</ul>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</footer>
 
 	<!-- Copyright -->
 
