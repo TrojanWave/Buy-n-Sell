@@ -42,7 +42,7 @@ $result_catagories = getCatagories();
 					<!-- Logo -->
 					<div class="col-lg-3 col-sm-6 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo" style="padding-left: 90px"><a href="index.html">Buy n Sell</a></div>
+							<div class="logo" style="padding-left: 90px"><a href="index.php">Buy n Sell</a></div>
 						</div>
 					</div>
 
@@ -74,7 +74,11 @@ $result_catagories = getCatagories();
 						</div>
 					</div>
 
-					<!-- Wishlist -->
+					<!-- Wishlist Cart Or Login Signup -->
+					<?php
+				if (isset($_SESSION["active"]) && $_SESSION["active"] == 1) {
+					///////////////////////// If logged in //////////////////////////////
+					?>
 					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
 							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
@@ -100,6 +104,35 @@ $result_catagories = getCatagories();
 							</div>
 						</div>
 					</div>
+					<?php
+				}else {
+					////////////////////////// If not Logged in /////////////////////////////
+					?>
+					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
+								<div class="wishlist_icon"><img src="images/login.png" alt=""></div>
+								<div class="wishlist_content">
+									<div class="wishlist_text"><a href="signIn.html">Log in</a></div>
+								</div>
+							</div>
+
+							<!-- Cart -->
+							<div class="cart">
+								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+									<div class="cart_icon">
+										<img src="images/signup.png" alt="">
+									</div>
+									<div class="cart_content">
+										<div class="cart_text"><a href="signUp.php">Create an Account</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+				}
+					?>
 				</div>
 			</div>
 		</div>
@@ -126,7 +159,7 @@ $result_catagories = getCatagories();
 									///////////////////// The catagory list ////////////////////////////////////////
 										while($row_catagories = $result_catagories->fetch_assoc()) {
 											?>
-											<li><a href="viewCatogoryComputers&Laptops.html"><?php echo $row_catagories["name"]; ?><i class="fas fa-chevron-right ml-auto"></i></a></li>
+											<li><a href="viewCatogory.php?catagory=<?php echo $row_catagories["id"]; ?>"><?php echo $row_catagories["name"]; ?><i class="fas <?php echo $row_catagories["fa_icon"]; ?> ml-auto"></i></a></li>
 										<?php
 										}
 									?>
@@ -137,7 +170,7 @@ $result_catagories = getCatagories();
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="index.html">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="index.php">Home<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="requestList.html">Requests<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="postAdStep1.html">Post your Ad<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="postRequest.html">Post a Request<i class="fas fa-chevron-down"></i></a></li>
@@ -194,7 +227,7 @@ $result_catagories = getCatagories();
 									</ul>
 								</li>-->
 								<li class="page_menu_item">
-									<a href="index.html">Home<i class="fa fa-angle-down"></i></a>
+									<a href="index.php">Home<i class="fa fa-angle-down"></i></a>
 								</li>
 								<li class="page_menu_item has-children">
 									<a href="requestList.html">Requests<i></i></a>
@@ -226,63 +259,6 @@ $result_catagories = getCatagories();
 						<div class="banner_price"><span>$530</span>$460</div>
 						<div class="banner_product_name">Apple Iphone 6s</div>
 						<div class="button banner_button"><a href="#">Shop Now</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Characteristics -->
-
-	<div class="characteristics">
-		<div class="container">
-			<div class="row">
-
-				<!-- Char. Item -->
-				<div class="col-lg-3 col-md-6 char_col">
-
-					<div class="char_item d-flex flex-row align-items-center justify-content-start">
-						<div class="char_icon"><img src="images/char_1.png" alt=""></div>
-						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Char. Item -->
-				<div class="col-lg-3 col-md-6 char_col">
-
-					<div class="char_item d-flex flex-row align-items-center justify-content-start">
-						<div class="char_icon"><img src="images/char_2.png" alt=""></div>
-						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Char. Item -->
-				<div class="col-lg-3 col-md-6 char_col">
-
-					<div class="char_item d-flex flex-row align-items-center justify-content-start">
-						<div class="char_icon"><img src="images/char_3.png" alt=""></div>
-						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Char. Item -->
-				<div class="col-lg-3 col-md-6 char_col">
-
-					<div class="char_item d-flex flex-row align-items-center justify-content-start">
-						<div class="char_icon"><img src="images/char_4.png" alt=""></div>
-						<div class="char_content">
-							<div class="char_title">Free Delivery</div>
-							<div class="char_subtitle">from $50</div>
-						</div>
 					</div>
 				</div>
 			</div>
