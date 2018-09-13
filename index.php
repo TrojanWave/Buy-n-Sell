@@ -1,3 +1,9 @@
+<?php
+require_once('API/keepSession.php');
+require_once('API/getCatagories.php');
+
+$result_catagories = getCatagories();
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,7 +122,14 @@
 								</div>
 
 								<ul class="cat_menu">
-									<li><a href="viewCatogoryComputers&Laptops.html">Vehicles<i class="fas fa-chevron-right ml-auto"></i></a></li>
+									<?php
+									///////////////////// The catagory list ////////////////////////////////////////
+										while($row_catagories = $result_catagories->fetch_assoc()) {
+											?>
+											<li><a href="viewCatogoryComputers&Laptops.html"><?php echo $row_catagories["name"]; ?><i class="fas fa-chevron-right ml-auto"></i></a></li>
+										<?php
+										}
+									?>
 								</ul>
 							</div>
 
